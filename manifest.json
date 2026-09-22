@@ -1,0 +1,24 @@
+{
+  "name": "SQL Mastery: DA & DE Handbook",
+  "short_name": "SQL Mastery",
+  "description": "Cẩm nang học tập, tra cứu & thực hành SQL trực tiếp offline dành cho Data Analyst và Data Engineer",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "site/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "site/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

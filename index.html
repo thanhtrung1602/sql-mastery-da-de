@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#0b0f19">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>SQL Mastery: DA &amp; DE Handbook (Thực Hành &amp; Tra Cứu)</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="site/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="brand-section">
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+        <a href="#view/home" class="brand-logo">
+          <span>🚀 SQL Mastery</span>
+          <span class="brand-badge">DA &amp; DE</span>
+        </a>
+      </div>
+
+      <!-- Track Selector Filter -->
+      <div class="track-selector">
+        <button class="track-btn active" data-track="All">Tất cả</button>
+        <button class="track-btn" data-track="Foundation">🌱 Nền tảng</button>
+        <button class="track-btn" data-track="DA">📊 Data Analyst</button>
+        <button class="track-btn" data-track="DE">⚙️ Data Engineer</button>
+        <button class="track-btn" data-track="Practice">✍️ Làm bài tập</button>
+      </div>
+
+      <!-- Action Buttons & Tools -->
+      <div class="nav-actions">
+        <!-- Quick Search Button -->
+        <button class="search-btn" onclick="openSearch()">
+          <span>🔍</span>
+          <span>Tìm kiếm bài học, SQL...</span>
+          <span class="search-shortcut">Ctrl K</span>
+        </button>
+
+        <!-- Font Size Controls -->
+        <button class="control-btn" id="font-decrease" title="Giảm cỡ chữ">A-</button>
+        <button class="control-btn" id="font-increase" title="Tăng cỡ chữ">A+</button>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button class="control-btn" id="theme-toggle" title="Đổi giao diện Sáng / Tối">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <div class="content-wrapper">
+      <!-- Left Sidebar Navigation -->
+      <div class="sidebar-overlay" id="sidebar-overlay"></div>
+      <aside class="sidebar" id="sidebar">
+        <!-- Progress Bar Card -->
+        <div class="sidebar-header">
+          <div class="progress-card">
+            <div class="progress-header">
+              <span>Tiến độ học tập</span>
+              <span id="progress-text" style="color:var(--accent-primary)">0/37 bài (0%)</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module Accordion List -->
+        <div class="sidebar-content" id="sidebar-content">
+          <!-- Populated by app.js -->
+        </div>
+      </aside>
+
+      <!-- Main Lesson / Exercise Content Area -->
+      <main class="main-content" id="main-content">
+        <!-- Populated by app.js -->
+      </main>
+    </div>
+  </div>
+
+  <!-- Global Instant Search Modal (Ctrl + K) -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <span>🔍</span>
+        <input type="text" class="search-modal-input" id="search-input" placeholder="Tìm theo tên bài, hàm SQL (ROW_NUMBER, JOIN, SCD), hoặc đề bài..." autocomplete="off">
+        <span class="search-shortcut">ESC</span>
+      </div>
+      <div class="search-results-list" id="search-results">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts (100% Offline & Embedded) -->
+  <script src="site/alasql.min.js"></script>
+  <script src="site/seed_data.js"></script>
+  <script src="site/data.js"></script>
+  <script src="site/app.js"></script>
+</body>
+</html>
